@@ -39,6 +39,7 @@ class ViewController: UIViewController {
             
             if let indexPath = collectionView.indexPath(for: collectionCell) {
                 controller.photoImageUrl = URL(string: rectPhotos[indexPath.item])
+                controller.analyzingImage = collectionCell.photoImageView.image
             }
         }
     }
