@@ -18,13 +18,29 @@ class ViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     
     // MARK: - Properties
-    var photos = [String]()
+    var squarePhotos = [String]()
+    var rectPhotos = [String]()
 
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         getPhotos()
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowPhotoTags",
+            let controller = segue.destination as? PhotoTagsViewController {
+            
+            guard let collectionCell = sender as? PhotoCell else {
+                fatalError("The selected cell is not PhotoCell")
+            }
+            
+            if let indexPath = collectionView.indexPath(for: collectionCell) {
+                controller.photoImageUrl = URL(string: rectPhotos[indexPath.item])
+            }
+        }
     }
     
     // MARK: - File Private
@@ -36,12 +52,16 @@ class ViewController: UIViewController {
                     return
                 }
                 
-                let photos = JSON(value)["photos"]["photo"].array?.map { json in
+                let squarePhotos = JSON(value)["photos"]["photo"].array?.map { json in
                     json["url_q"].stringValue
                 }
+                let rectPhotos = JSON(value)["photos"]["photo"].array?.map { json in
+                    json["url_z"].stringValue
+                }
                 
-                if let photos = photos {
-                    self.photos = photos
+                if let squarePhotos = squarePhotos, let rectPhotos = rectPhotos {
+                    self.squarePhotos = squarePhotos
+                    self.rectPhotos = rectPhotos
                     self.collectionView.reloadData()
                 } else {
                     print("photos do not contain any data")
@@ -54,7 +74,7 @@ class ViewController: UIViewController {
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.photos.count;
+        return self.squarePhotos.count;
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -63,7 +83,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
             fatalError("The dequeued cell is not an instance of PhotoCell")
         }
         
-        if let url = URL(string: self.photos[indexPath.item]) {
+        if let url = URL(string: self.squarePhotos[indexPath.item]) {
             photoCell.photoImageView.af_setImage(withURL: url)
         } else {
             print("Nil url cannot be initialized as a photo")
