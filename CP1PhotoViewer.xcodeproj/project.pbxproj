@@ -32,6 +32,7 @@
 		6F550ECC20AFCAFE0008FE8C /* FlickrRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrRouter.swift; sourceTree = "<group>"; };
 		6F550ED220B03D250008FE8C /* PhotoTagsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTagsViewController.swift; sourceTree = "<group>"; };
 		6F550ED420B047D40008FE8C /* ImaggaRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImaggaRouter.swift; sourceTree = "<group>"; };
+		6F550ED720B058F90008FE8C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A5DDD1E849FDAFFE6241A8C9 /* Pods-CP1PhotoViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CP1PhotoViewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CP1PhotoViewer/Pods-CP1PhotoViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		E81E72822AD044A6C2651BD9 /* Pods-CP1PhotoViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CP1PhotoViewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-CP1PhotoViewer/Pods-CP1PhotoViewer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,6 +52,7 @@
 		6F550E8A20AD889B0008FE8C = {
 			isa = PBXGroup;
 			children = (
+				6F550ED720B058F90008FE8C /* README.md */,
 				6F550E9520AD889B0008FE8C /* CP1PhotoViewer */,
 				6F550E9420AD889B0008FE8C /* Products */,
 				72E9139DD140533940186336 /* Pods */,
