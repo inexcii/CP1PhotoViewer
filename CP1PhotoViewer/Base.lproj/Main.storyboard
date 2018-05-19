@@ -72,6 +72,9 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="9gb-pc-ojz"/>
+                    <connections>
+                        <outlet property="collectionView" destination="RWw-hW-LkF" id="jjI-Z2-UnN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

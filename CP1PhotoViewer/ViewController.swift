@@ -7,12 +7,46 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
+import SwiftyJSON
 
 /// Displays the photo viewer.
 class ViewController: UIViewController {
+    
+    // MARK: - IBOutlet
+    @IBOutlet var collectionView: UICollectionView!
+    
+    // MARK: - Properties
+    var photos = [String]()
 
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getPhotos()
+    }
+    
+    // MARK: - File Private
+    fileprivate func getPhotos() {
+        Alamofire.request(FlickrRouter.rest)
+            .responseJSON { response in
+                guard response.result.isSuccess, let value = response.result.value else {
+                    print("Error while fetching photos: \(String(describing: response.result.error))")
+                    return
+                }
+                
+                let photos = JSON(value)["photos"]["photo"].array?.map { json in
+                    json["url_q"].stringValue
+                }
+                
+                if let photos = photos {
+                    self.photos = photos
+                    self.collectionView.reloadData()
+                } else {
+                    print("photos do not contain any data")
+                }
+        }
     }
 }
 
@@ -20,9 +54,7 @@ class ViewController: UIViewController {
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        // TODO: change to the real photo numbers that is retrieved from an online photo viewer service
-        return 100;
+        return self.photos.count;
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -31,10 +63,12 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
             fatalError("The dequeued cell is not an instance of PhotoCell")
         }
         
-        // TODO: implement the photoCell with the real photo data
-        photoCell.photoImageView.backgroundColor = .gray
+        if let url = URL(string: self.photos[indexPath.item]) {
+            photoCell.photoImageView.af_setImage(withURL: url)
+        } else {
+            print("Nil url cannot be initialized as a photo")
+        }
         
         return photoCell
     }
-    
 }
