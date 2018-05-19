@@ -1,0 +1,6 @@
+framework module Pods_CP1PhotoViewer {
+  umbrella header "Pods-CP1PhotoViewer-umbrella.h"
+
+  export *
+  module * { export * }
+}
