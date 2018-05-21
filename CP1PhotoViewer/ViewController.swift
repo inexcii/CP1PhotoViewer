@@ -46,8 +46,14 @@ class ViewController: UIViewController {
     
     // MARK: - File Private
     fileprivate func getPhotos() {
+        
+        showLoadingHUD(view: collectionView)
+        
         Alamofire.request(FlickrRouter.rest)
             .responseJSON { response in
+                
+                self.hideLoadingHUD(view: self.collectionView)
+                
                 guard response.result.isSuccess, let value = response.result.value else {
                     print("Error while fetching photos: \(String(describing: response.result.error))")
                     return

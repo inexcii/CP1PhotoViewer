@@ -17,6 +17,7 @@
 		6F550ECD20AFCAFE0008FE8C /* FlickrRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F550ECC20AFCAFE0008FE8C /* FlickrRouter.swift */; };
 		6F550ED320B03D250008FE8C /* PhotoTagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F550ED220B03D250008FE8C /* PhotoTagsViewController.swift */; };
 		6F550ED520B047D40008FE8C /* ImaggaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F550ED420B047D40008FE8C /* ImaggaRouter.swift */; };
+		6F550EE220B296BA0008FE8C /* UIViewController+LoadingHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F550EE120B296BA0008FE8C /* UIViewController+LoadingHUD.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		6F550ED220B03D250008FE8C /* PhotoTagsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTagsViewController.swift; sourceTree = "<group>"; };
 		6F550ED420B047D40008FE8C /* ImaggaRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImaggaRouter.swift; sourceTree = "<group>"; };
 		6F550ED720B058F90008FE8C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6F550EE120B296BA0008FE8C /* UIViewController+LoadingHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+LoadingHUD.swift"; sourceTree = "<group>"; };
 		A5DDD1E849FDAFFE6241A8C9 /* Pods-CP1PhotoViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CP1PhotoViewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CP1PhotoViewer/Pods-CP1PhotoViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		E81E72822AD044A6C2651BD9 /* Pods-CP1PhotoViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CP1PhotoViewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-CP1PhotoViewer/Pods-CP1PhotoViewer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +79,7 @@
 				6F550EC820AE76C20008FE8C /* PhotoCell.swift */,
 				6F550E9820AD889B0008FE8C /* ViewController.swift */,
 				6F550ED220B03D250008FE8C /* PhotoTagsViewController.swift */,
+				6F550EE120B296BA0008FE8C /* UIViewController+LoadingHUD.swift */,
 				6F550E9A20AD889B0008FE8C /* Main.storyboard */,
 				6F550E9D20AD889E0008FE8C /* Assets.xcassets */,
 				6F550E9F20AD889E0008FE8C /* LaunchScreen.storyboard */,
@@ -180,12 +183,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-CP1PhotoViewer/Pods-CP1PhotoViewer-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F550E9920AD889B0008FE8C /* ViewController.swift in Sources */,
+				6F550EE220B296BA0008FE8C /* UIViewController+LoadingHUD.swift in Sources */,
 				6F550ED320B03D250008FE8C /* PhotoTagsViewController.swift in Sources */,
 				6F550ECD20AFCAFE0008FE8C /* FlickrRouter.swift in Sources */,
 				6F550EC920AE76C20008FE8C /* PhotoCell.swift in Sources */,

@@ -33,7 +33,10 @@ class PhotoTagsViewController: UIViewController {
         super.viewDidLoad()
 
         if let url = photoImageUrl {
-            photoImageView.af_setImage(withURL: url)
+            showLoadingHUD(view: photoImageView)
+            photoImageView.af_setImage(withURL: url) { response in
+                self.hideLoadingHUD(view: self.photoImageView)
+            }
         } else {
             print("photo image url is unknown")
         }
@@ -53,6 +56,9 @@ class PhotoTagsViewController: UIViewController {
             
             self.uploadAnalyzingImageData(imageData: imageData) { contentID in
                 self.downloadTags(contentID: contentID, completion: { tags in
+                    
+                    self.hideLoadingHUD(view: self.tagsTableView)
+                    
                     if let tags = tags {
                         self.tags = tags
                         
@@ -66,6 +72,9 @@ class PhotoTagsViewController: UIViewController {
     }
     
     func uploadAnalyzingImageData(imageData:Data, completion: @escaping (String) -> Void) {
+        
+        showLoadingHUD(view: tagsTableView)
+        
         Alamofire.upload(
             multipartFormData: { multipartFormData in
                 multipartFormData.append(imageData,
@@ -89,6 +98,7 @@ class PhotoTagsViewController: UIViewController {
                     completion(firstFileID)
                 })
             case .failure(let encodingError):
+                self.hideLoadingHUD(view: self.tagsTableView)
                 print(encodingError)
             }
         }
