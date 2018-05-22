@@ -27,7 +27,6 @@ class RCValues {
     // MARK: - Internal
     
     func secretInfo(forKey key: ValueKey) -> String {
-        print("secret info is: \(RemoteConfig.remoteConfig()[key.rawValue].stringValue ?? "undefined")")
         return RemoteConfig.remoteConfig()[key.rawValue].stringValue ?? "undefined"
     }
     
