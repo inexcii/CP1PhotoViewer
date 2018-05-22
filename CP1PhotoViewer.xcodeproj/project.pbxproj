@@ -78,20 +78,76 @@
 			isa = PBXGroup;
 			children = (
 				6F550E9620AD889B0008FE8C /* AppDelegate.swift */,
-				6F7ECBD120B3C0C200279FF1 /* RCValues.swift */,
-				6F550ECC20AFCAFE0008FE8C /* FlickrRouter.swift */,
-				6F550ED420B047D40008FE8C /* ImaggaRouter.swift */,
-				6F550EC820AE76C20008FE8C /* PhotoCell.swift */,
-				6F550E9820AD889B0008FE8C /* ViewController.swift */,
-				6F550ED220B03D250008FE8C /* PhotoTagsViewController.swift */,
-				6F550EE120B296BA0008FE8C /* UIViewController+LoadingHUD.swift */,
-				6F550E9A20AD889B0008FE8C /* Main.storyboard */,
-				6F550E9D20AD889E0008FE8C /* Assets.xcassets */,
-				6F550E9F20AD889E0008FE8C /* LaunchScreen.storyboard */,
+				6F7ECBD420B3CFD700279FF1 /* Views */,
+				6F7ECBD320B3CFA900279FF1 /* Controllers */,
+				6F7ECBD620B3D05900279FF1 /* Extensions */,
+				6F7ECBD720B3D1BD00279FF1 /* Utilities */,
+				6F7ECBD520B3D00300279FF1 /* Resources */,
 				6F550EA220AD889E0008FE8C /* Info.plist */,
-				6F7ECBCF20B3BFDD00279FF1 /* GoogleService-Info.plist */,
 			);
 			path = CP1PhotoViewer;
+			sourceTree = "<group>";
+		};
+		6F7ECBD320B3CFA900279FF1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6F550E9820AD889B0008FE8C /* ViewController.swift */,
+				6F550ED220B03D250008FE8C /* PhotoTagsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6F7ECBD420B3CFD700279FF1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6F550EC820AE76C20008FE8C /* PhotoCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6F7ECBD520B3D00300279FF1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6F550E9D20AD889E0008FE8C /* Assets.xcassets */,
+				6F550E9A20AD889B0008FE8C /* Main.storyboard */,
+				6F550E9F20AD889E0008FE8C /* LaunchScreen.storyboard */,
+				6F7ECBCF20B3BFDD00279FF1 /* GoogleService-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6F7ECBD620B3D05900279FF1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6F550EE120B296BA0008FE8C /* UIViewController+LoadingHUD.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6F7ECBD720B3D1BD00279FF1 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				6F7ECBD820B3D1CD00279FF1 /* Alamofire */,
+				6F7ECBD920B3D1F200279FF1 /* Firebase */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		6F7ECBD820B3D1CD00279FF1 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				6F550ECC20AFCAFE0008FE8C /* FlickrRouter.swift */,
+				6F550ED420B047D40008FE8C /* ImaggaRouter.swift */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		6F7ECBD920B3D1F200279FF1 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				6F7ECBD120B3C0C200279FF1 /* RCValues.swift */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		72E9139DD140533940186336 /* Pods */ = {
