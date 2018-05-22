@@ -27,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="-758" y="131"/>
         </scene>
-        <!--View Controller-->
+        <!--Photos-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CP1PhotoViewer" customModuleProvider="target" sceneMemberID="viewController">
@@ -73,7 +73,7 @@
                             <outlet property="delegate" destination="BYZ-38-t0r" id="Q9N-oe-zOW"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="9gb-pc-ojz"/>
+                    <navigationItem key="navigationItem" title="Photos" id="9gb-pc-ojz"/>
                     <connections>
                         <outlet property="collectionView" destination="RWw-hW-LkF" id="jjI-Z2-UnN"/>
                     </connections>
