@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>376820964976-1g9tl2fofpb9k80m71k08cp1j4jqgdm8.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.376820964976-1g9tl2fofpb9k80m71k08cp1j4jqgdm8</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD6828dd3OD1g78R6x-puj2kNgmbKrssFE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>376820964976</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>work.zhouyuan.CP1PhotoViewer</string>
+	<key>PROJECT_ID</key>
+	<string>cp1-photo-viewer</string>
+	<key>STORAGE_BUCKET</key>
+	<string>cp1-photo-viewer.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:376820964976:ios:25138c18a6933155</string>
+	<key>DATABASE_URL</key>
+	<string>https://cp1-photo-viewer.firebaseio.com</string>
+</dict>
+</plist>

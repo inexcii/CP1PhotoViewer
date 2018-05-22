@@ -14,7 +14,7 @@ public enum FlickrRouter: URLRequestConvertible {
     
     enum Constants {
         static let baseURLPath = "https://api.flickr.com/services"
-        static let apiKey = "c1a57bdc9b3bfecfa9a92183f7ee13a7"
+        static let apiKey = RCValues.sharedInstance.secretInfo(forKey: .flickrApiKey)
     }
     
     // REST reqeust format, append cases if other formats are needed(i.e. SOAP)

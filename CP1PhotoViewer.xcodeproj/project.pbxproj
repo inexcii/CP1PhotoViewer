@@ -18,6 +18,8 @@
 		6F550ED320B03D250008FE8C /* PhotoTagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F550ED220B03D250008FE8C /* PhotoTagsViewController.swift */; };
 		6F550ED520B047D40008FE8C /* ImaggaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F550ED420B047D40008FE8C /* ImaggaRouter.swift */; };
 		6F550EE220B296BA0008FE8C /* UIViewController+LoadingHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F550EE120B296BA0008FE8C /* UIViewController+LoadingHUD.swift */; };
+		6F7ECBD020B3BFDD00279FF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F7ECBCF20B3BFDD00279FF1 /* GoogleService-Info.plist */; };
+		6F7ECBD220B3C0C200279FF1 /* RCValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7ECBD120B3C0C200279FF1 /* RCValues.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		6F550ED420B047D40008FE8C /* ImaggaRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImaggaRouter.swift; sourceTree = "<group>"; };
 		6F550ED720B058F90008FE8C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6F550EE120B296BA0008FE8C /* UIViewController+LoadingHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+LoadingHUD.swift"; sourceTree = "<group>"; };
+		6F7ECBCF20B3BFDD00279FF1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6F7ECBD120B3C0C200279FF1 /* RCValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCValues.swift; sourceTree = "<group>"; };
 		A5DDD1E849FDAFFE6241A8C9 /* Pods-CP1PhotoViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CP1PhotoViewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CP1PhotoViewer/Pods-CP1PhotoViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		E81E72822AD044A6C2651BD9 /* Pods-CP1PhotoViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CP1PhotoViewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-CP1PhotoViewer/Pods-CP1PhotoViewer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				6F550E9620AD889B0008FE8C /* AppDelegate.swift */,
+				6F7ECBD120B3C0C200279FF1 /* RCValues.swift */,
 				6F550ECC20AFCAFE0008FE8C /* FlickrRouter.swift */,
 				6F550ED420B047D40008FE8C /* ImaggaRouter.swift */,
 				6F550EC820AE76C20008FE8C /* PhotoCell.swift */,
@@ -84,6 +89,7 @@
 				6F550E9D20AD889E0008FE8C /* Assets.xcassets */,
 				6F550E9F20AD889E0008FE8C /* LaunchScreen.storyboard */,
 				6F550EA220AD889E0008FE8C /* Info.plist */,
+				6F7ECBCF20B3BFDD00279FF1 /* GoogleService-Info.plist */,
 			);
 			path = CP1PhotoViewer;
 			sourceTree = "<group>";
@@ -166,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F550EA120AD889E0008FE8C /* LaunchScreen.storyboard in Resources */,
+				6F7ECBD020B3BFDD00279FF1 /* GoogleService-Info.plist in Resources */,
 				6F550E9E20AD889E0008FE8C /* Assets.xcassets in Resources */,
 				6F550E9C20AD889B0008FE8C /* Main.storyboard in Resources */,
 			);
@@ -183,15 +190,21 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-CP1PhotoViewer/Pods-CP1PhotoViewer-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -229,6 +242,7 @@
 				6F550ECD20AFCAFE0008FE8C /* FlickrRouter.swift in Sources */,
 				6F550EC920AE76C20008FE8C /* PhotoCell.swift in Sources */,
 				6F550ED520B047D40008FE8C /* ImaggaRouter.swift in Sources */,
+				6F7ECBD220B3C0C200279FF1 /* RCValues.swift in Sources */,
 				6F550E9720AD889B0008FE8C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

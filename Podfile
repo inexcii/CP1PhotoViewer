@@ -8,5 +8,7 @@ target 'CP1PhotoViewer' do
   pod 'AlamofireImage', '~> 3.3'
   pod 'SwiftyJSON', '~> 4.1'
   pod 'MBProgressHUD', '~> 1.1'
+  pod 'Firebase/Core'
+  pod 'Firebase/RemoteConfig'
 
 end

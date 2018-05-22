@@ -14,7 +14,7 @@ public enum ImaggaRouter: URLRequestConvertible {
     
     enum Constants {
         static let baseURLPath = "http://api.imagga.com/v1"
-        static let authenticationToken = "Basic YWNjXzY5NWUzOGE3YzdmZWNjODozMGFkNzc5OGMyNDM4NDI0MGJjMDZlOTU4NTVkNDdjYQ=="
+        static let authenticationToken = RCValues.sharedInstance.secretInfo(forKey: .imaggaAuthToken)
     }
     
     // Append cases when other services of Imagga become necessary
